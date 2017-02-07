@@ -1,0 +1,68 @@
+1.0.1:
+    - First version of Redirect
+    - create_redirects_table.php
+1.0.2: Add extra checks for published redirect file
+1.0.3: Add several UI improvements and added a redirect tester!
+1.0.4:
+    - Add more improvements and fixed some bugs
+    - add_test_url_to_redirects_table.php
+    - change_type_url_columns_redirects_table.php
+1.0.5: Add support for importing and exporting redirects
+1.0.6:
+    - Some fixes and add scheduling support for redirects
+    - add_date_fields_to_redirects_table.php
+1.0.7: Improve UI for managing redirects
+1.0.8:
+    - Improvements to code base
+    - rename_is_published_column_redirects_table.php
+1.0.9: Fixes issue with installing update 1.0.8
+1.0.10: Small fixes
+1.0.11: Improve language file and messages
+1.0.12: Fixes/improvements and support for Laravel 5.1
+1.0.13: Add 404 status code (link spamming)
+1.1.0:
+    - !!! Add support for redirection to a CMS Page (re-publishing redirects is required)
+    - add_target_type_fields_to_redirects_table.php
+1.1.1: Fixes a bug that occured while editing a redirect (thanks lorajc)
+1.1.2: Fixes a bug for scheduled redirects
+1.1.3:
+    - Add PhpUnit tests and minor improvements
+    - change_to_url_column_redirects_table.php
+2.0.0:
+    - !!! New major version with lot of new features (Use only with October CMS stable)
+    - create_clients_table.php
+    - add_system_field_to_redirects_table.php
+    - add_last_used_at_field_to_redirects_table.php
+2.0.1: Added French language (thanks pvullioud) and small improvements/fixes
+2.0.2: Support for Static Pages (RainLab.Pages)
+2.0.3: Add functionality that allows you to create redirects from Request Log items (feature-request by pvullioud)
+2.0.4:
+    - Database fixes and fixed issue with publishing redirects
+    - remove_publish_status_column_redirects_table.php
+2.0.5: Fix issue with URL character encoding source path
+2.0.6: Fix path issues with redirects when October CMS installed in a subdirectory
+2.0.7: Fix uninstall issue
+2.0.8:
+    - Database maintenance. Updated all timestamp columns to be nullable.
+    - update_timestamp_nullable.php
+2.0.9: Reduce logging entries for "Route not found" on placeholder redirects
+2.0.10: Fixes critical issue with writing redirects file (thanks jan-vince)
+2.0.11:
+    - Add categories for categorizing redirects. And added swedish language (tack Hambern)
+    - create_categories_table.php
+    - add_category_id_to_redirects_table.php
+2.0.12: Fixes some issues and add ability to reset redirect statistics
+2.0.13: Language update (sv) and Postgres compatibility
+2.0.14: Automatic (system) redirect creation when Static Page or CMS Page URL changes
+2.0.15:
+    - Add redirect log
+    - create_redirect_logs_table.php
+2.0.16: Add spanish language (gracias arzola)
+2.0.17: Minor fixes and code optimization
+2.0.18: Add redirect statistics (WIP) (please submit your ideas!)
+2.0.19: Fix SQLite compatibility issues (thanks jan-vince)
+2.0.20: Add HTTP status code 410 (Gone) (requested by jan-vince)
+2.0.21: Add HTTP status code 303 (See Other) (requested by ayumihamsaki) and some small fixes.
+2.0.22: Add Russian language and fix backend menu navigation issue (спасибо sheck87)
+2.0.23: Add missing query part of the URL when creating a Redirect from Request Log
+2.0.24: Minor fixes and code optimization

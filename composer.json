@@ -1,0 +1,15 @@
+{
+    "name": "adrenth/redirect",
+    "description": "A redirect plugin for October CMS",
+    "type": "october-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Alwin Drenth",
+            "email": "adrenth@gmail.com"
+        }
+    ],
+    "require": {
+        "jaybizzle/crawler-detect": "^1.2"
+    }
+}

@@ -1,0 +1,16 @@
+columns:
+    id: ID
+    match_type: adrenth.redirect::lang.redirect.match_type
+    from_url: adrenth.redirect::lang.redirect.from_url
+    to_url: adrenth.redirect::lang.redirect.to_url
+    test_url: adrenth.redirect::lang.test.input_path
+    requirements: adrenth.redirect::lang.redirect.requirements
+    status_code: adrenth.redirect::lang.redirect.status_code
+    hits: adrenth.redirect::lang.redirect.hits
+    sort_order: adrenth.redirect::lang.redirect.sort_order
+    from_date: adrenth.redirect::lang.scheduling.from_date
+    to_date: adrenth.redirect::lang.scheduling.to_date
+    is_enabled: adrenth.redirect::lang.redirect.enabled
+    last_used_at: adrenth.redirect::lang.redirect.last_used_at
+    created_at: adrenth.redirect::lang.redirect.created_at
+    updated_at: adrenth.redirect::lang.redirect.modified_at

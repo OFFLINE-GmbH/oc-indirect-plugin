@@ -1,0 +1,169 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    from_url:
+        label: adrenth.redirect::lang.redirect.from_url
+        placeholder: adrenth.redirect::lang.redirect.from_url_placeholder
+        type: text
+        span: left
+        comment: adrenth.redirect::lang.redirect.from_url_comment
+        required: true
+    to_url:
+        label: adrenth.redirect::lang.redirect.to_url
+        placeholder: adrenth.redirect::lang.redirect.to_url_placeholder
+        type: text
+        span: right
+        comment: adrenth.redirect::lang.redirect.to_url_comment
+        cssClass: redirect-target
+        trigger:
+            action: show
+            field: target_type
+            condition: value[path_or_url]
+    cms_page:
+        label: adrenth.redirect::lang.redirect.target_type_cms_page
+        span: right
+        type: dropdown
+        cssClass: redirect-target
+        trigger:
+            action: show
+            field: target_type
+            condition: value[cms_page]
+    static_page:
+        label: adrenth.redirect::lang.redirect.target_type_static_page
+        span: right
+        type: dropdown
+        cssClass: redirect-target
+        trigger:
+            action: show
+            field: target_type
+            condition: value[static_page]
+
+tabs:
+    defaultTab: adrenth.redirect::lang.tab.tab_general
+    fields:
+        #
+        # General
+        #
+        target_type:
+            label: adrenth.redirect::lang.redirect.target_type
+            required: true
+            type: dropdown
+            default: path_or_url
+            span: left
+        match_type:
+            label: adrenth.redirect::lang.redirect.match_type
+            type: dropdown
+            required: true
+            span: right
+            options:
+                exact: adrenth.redirect::lang.redirect.exact
+                placeholders: adrenth.redirect::lang.redirect.placeholders
+        status_code:
+            label: adrenth.redirect::lang.redirect.status_code
+            type: dropdown
+            required: true
+            span: left
+            options:
+                301: adrenth.redirect::lang.redirect.permanent
+                302: adrenth.redirect::lang.redirect.temporary
+                303: adrenth.redirect::lang.redirect.see_other
+                404: adrenth.redirect::lang.redirect.not_found
+                410: adrenth.redirect::lang.redirect.gone
+            attributes:
+                onchange: "$('div[data-field-name=to_url]').toggleClass('hidden', $(this).val().charAt(0) === '4');$('div.status-info').hide();$('#info' + $(this).val()).show();"
+        sort_order:
+            label: adrenth.redirect::lang.redirect.priority
+            type: text
+            span: right
+        status_code_info:
+            type: partial
+            span: left
+        category:
+            label: adrenth.redirect::lang.redirect.category
+            span: right
+            nameFrom: name
+            type: relation
+        is_enabled:
+            label: adrenth.redirect::lang.redirect.enabled
+            comment: adrenth.redirect::lang.redirect.enabled_comment
+            span: right
+            type: switch
+            default: true
+        #
+        # Requirements
+        #
+        section_requirements:
+            tab: adrenth.redirect::lang.tab.tab_requirements
+            type: section
+            commentAbove: adrenth.redirect::lang.redirect.requirements_comment
+            trigger:
+                action: show
+                field: match_type
+                condition: value[placeholders]
+        requirements:
+            tab: adrenth.redirect::lang.tab.tab_requirements
+            type: repeater
+            span: full
+            prompt: adrenth.redirect::lang.redirect.requirements_prompt
+            trigger:
+                action: show
+                field: match_type
+                condition: value[placeholders]
+            form:
+                fields:
+                    placeholder:
+                        label: adrenth.redirect::lang.redirect.placeholder
+                        comment: adrenth.redirect::lang.redirect.placeholder_comment
+                        type: text
+                        span: left
+                        required: true
+                    requirement:
+                        label: adrenth.redirect::lang.redirect.requirement
+                        comment: adrenth.redirect::lang.redirect.requirement_comment
+                        type: text
+                        span: right
+                        required: true
+                    replacement:
+                        label: adrenth.redirect::lang.redirect.replacement
+                        comment: adrenth.redirect::lang.redirect.replacement_comment
+                        span: left
+                        required: false
+
+        #
+        # Test
+        #
+        section_test:
+            tab: adrenth.redirect::lang.tab.tab_test
+            type: section
+            commentAbove: adrenth.redirect::lang.test.test_comment
+        test_url:
+            tab: adrenth.redirect::lang.tab.tab_test
+            type: text
+            hidden: true
+        test:
+            tab: adrenth.redirect::lang.tab.tab_test
+            type: partial
+            path: redirect_test
+        #
+        # Scheduling
+        #
+        section_scheduling:
+            tab: adrenth.redirect::lang.tab.tab_scheduling
+            type: section
+            commentAbove: adrenth.redirect::lang.scheduling.scheduling_comment
+        from_date:
+            tab: adrenth.redirect::lang.tab.tab_scheduling
+            label: adrenth.redirect::lang.scheduling.from_date
+            comment: adrenth.redirect::lang.scheduling.from_date_comment
+            type: datepicker
+            mode: date
+            span: left
+        to_date:
+            tab: adrenth.redirect::lang.tab.tab_scheduling
+            label: adrenth.redirect::lang.scheduling.to_date
+            comment: adrenth.redirect::lang.scheduling.to_date_comment
+            type: datepicker
+            mode: date
+            span: right
