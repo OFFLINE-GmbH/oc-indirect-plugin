@@ -3,19 +3,19 @@
 # ===================================
 
 # Model List Column configuration
-list: $/adrenth/redirect/models/redirect/columns.yaml
+list: $/offline/indirect/models/redirect/columns.yaml
 
 # Model Class name
-modelClass: Adrenth\Redirect\Models\Redirect
+modelClass: OFFLINE\Indirect\Models\Redirect
 
 # List Title
-title: adrenth.redirect::lang.title.redirects
+title: OFFLINE.indirect::lang.title.redirects
 
 # Link URL for each record
-recordUrl: adrenth/redirect/redirects/update/:id
+recordUrl: offline/indirect/redirects/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: adrenth.redirect::lang.list.no_records
+noRecordsMessage: OFFLINE.indirect::lang.list.no_records
 
 # Records to display per page
 recordsPerPage: 20

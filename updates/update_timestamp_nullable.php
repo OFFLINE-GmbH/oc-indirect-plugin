@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Updates;
+namespace OFFLINE\Indirect\Updates;
 
 use DbDongle;
 use October\Rain\Database\Updates\Migration;
@@ -8,7 +8,7 @@ use October\Rain\Database\Updates\Migration;
 /**
  * Class UpdateTimestampsNullable
  *
- * @package Adrenth\Redirect\Updates
+ * @package OFFLINE\Indirect\Updates
  */
 class UpdateTimestampsNullable extends Migration
 {
@@ -16,7 +16,7 @@ class UpdateTimestampsNullable extends Migration
     public function up()
     {
         DbDongle::disableStrictMode();
-        DbDongle::convertTimestamps('adrenth_redirect_redirects', ['created_at', 'updated_at']);
+        DbDongle::convertTimestamps('offline_indirect_redirects', ['created_at', 'updated_at']);
     }
 
     public function down()

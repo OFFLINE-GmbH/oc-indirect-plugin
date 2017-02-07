@@ -1,13 +1,13 @@
 <?php
 
-namespace Adrenth\Redirect\Classes;
+namespace OFFLINE\Indirect\Classes;
 
-use Adrenth\Redirect\Models\Redirect;
+use OFFLINE\Indirect\Models\Redirect;
 
 /**
  * Class StaticPageHandler
  *
- * @package Adrenth\Redirect\Classes
+ * @package OFFLINE\Indirect\Classes
  */
 class StaticPageHandler extends PageHandler
 {

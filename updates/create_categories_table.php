@@ -1,8 +1,8 @@
 <?php
 
-namespace Adrenth\Redirect\Updates;
+namespace OFFLINE\Indirect\Updates;
 
-use Adrenth\Redirect\Models\Category;
+use OFFLINE\Indirect\Models\Category;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 use Schema;
@@ -10,13 +10,13 @@ use Schema;
 /**
  * Class CreateCategoriesTable
  *
- * @package Adrenth\Redirect\Updates
+ * @package OFFLINE\Indirect\Updates
  */
 class CreateCategoriesTable extends Migration
 {
     public function up()
     {
-        Schema::create('adrenth_redirect_categories', function (Blueprint $table) {
+        Schema::create('offline_indirect_categories', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
@@ -28,6 +28,6 @@ class CreateCategoriesTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('adrenth_redirect_categories');
+        Schema::dropIfExists('offline_indirect_categories');
     }
 }

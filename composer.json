@@ -1,9 +1,13 @@
 {
-    "name": "adrenth/redirect",
+    "name": "offline/indirect",
     "description": "A redirect plugin for October CMS",
     "type": "october-plugin",
     "license": "proprietary",
     "authors": [
+        {
+            "name": "Tobias Kuendig",
+            "email": "tobias@offline.swiss"
+        },
         {
             "name": "Alwin Drenth",
             "email": "adrenth@gmail.com"

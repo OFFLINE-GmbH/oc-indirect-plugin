@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Models;
+namespace OFFLINE\Indirect\Models;
 
 use Backend\Models\ExportModel;
 
@@ -9,14 +9,14 @@ use Backend\Models\ExportModel;
 /**
  * Class RedirectExport
  *
- * @package Adrenth\Redirect\Models
+ * @package OFFLINE\Indirect\Models
  */
 class RedirectExport extends ExportModel
 {
     /**
      * {@inheritdoc}
      */
-    public $table = 'adrenth_redirect_redirects';
+    public $table = 'offline_indirect_redirects';
 
     /**
      * {@inheritdoc}

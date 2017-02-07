@@ -3,13 +3,13 @@
 # ===================================
 
 import:
-    title: adrenth.redirect::lang.title.import
-    modelClass: Adrenth\Redirect\Models\RedirectImport
-    list: $/adrenth/redirect/models/redirectimport/columns.yaml
-    redirect: adrenth/redirect/redirects
+    title: OFFLINE.indirect::lang.title.import
+    modelClass: OFFLINE\Indirect\Models\RedirectImport
+    list: $/offline/indirect/models/redirectimport/columns.yaml
+    redirect: offline/indirect/redirects
 export:
-    title: adrenth.redirect::lang.title.export
-    modelClass: Adrenth\Redirect\Models\RedirectExport
-    list: $/adrenth/redirect/models/redirectexport/columns.yaml
-    redirect: adrenth/redirect/redirects
+    title: OFFLINE.indirect::lang.title.export
+    modelClass: OFFLINE\Indirect\Models\RedirectExport
+    list: $/offline/indirect/models/redirectexport/columns.yaml
+    redirect: offline/indirect/redirects
     filename: redirects.csv

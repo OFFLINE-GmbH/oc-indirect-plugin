@@ -4,5 +4,5 @@
 
 fields:
     name:
-        label: adrenth.redirect::lang.redirect.name
+        label: OFFLINE.indirect::lang.redirect.name
         span: left

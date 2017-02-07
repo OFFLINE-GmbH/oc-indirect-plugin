@@ -1,8 +1,8 @@
 <?php
 
-namespace Adrenth\Redirect\Controllers;
+namespace OFFLINE\Indirect\Controllers;
 
-use Adrenth\Redirect\Models\RedirectLog;
+use OFFLINE\Indirect\Models\RedirectLog;
 use Backend\Behaviors\ListController;
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -14,7 +14,7 @@ use Lang;
 /**
  * Class Logs
  *
- * @package Adrenth\Redirect\Controllers
+ * @package OFFLINE\Indirect\Controllers
  * @mixin ListController
  */
 class Logs extends Controller
@@ -36,7 +36,7 @@ class Logs extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Adrenth.Redirect', 'redirect', 'logs');
+        BackendMenu::setContext('OFFLINE.indirect', 'redirect', 'logs');
     }
 
     // @codingStandardsIgnoreStart
@@ -49,7 +49,7 @@ class Logs extends Controller
     public function index_onEmptyLog()
     {
         RedirectLog::truncate();
-        Flash::success(Lang::get('adrenth.redirect::lang.flash.truncate_success'));
+        Flash::success(Lang::get('OFFLINE.indirect::lang.flash.truncate_success'));
         return $this->listRefresh();
     }
 
@@ -66,7 +66,7 @@ class Logs extends Controller
                 $record->delete();
             }
 
-            Flash::success(Lang::get('adrenth.redirect::lang.flash.delete_selected_success'));
+            Flash::success(Lang::get('OFFLINE.indirect::lang.flash.delete_selected_success'));
         }
         else {
             Flash::error(Lang::get('backend::lang.list.delete_selected_empty'));

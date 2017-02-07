@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/adrenth/redirect/models/category/columns.yaml
+list: $/offline/indirect/models/category/columns.yaml
 
 # Model Class name
-modelClass: Adrenth\Redirect\Models\Category
+modelClass: OFFLINE\Indirect\Models\Category
 
 # List Title
-title: adrenth.redirect::lang.title.categories
+title: OFFLINE.indirect::lang.title.categories
 
 # Link URL for each record
-recordUrl: adrenth/redirect/categories/update/:id
+recordUrl: offline/indirect/categories/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

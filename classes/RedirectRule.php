@@ -1,14 +1,14 @@
 <?php
 
-namespace Adrenth\Redirect\Classes;
+namespace OFFLINE\Indirect\Classes;
 
-use Adrenth\Redirect\Models\Redirect;
+use OFFLINE\Indirect\Models\Redirect;
 use Carbon\Carbon;
 
 /**
  * Class RedirectRule
  *
- * @package Adrenth\Redirect\Classes
+ * @package OFFLINE\Indirect\Classes
  */
 class RedirectRule
 {

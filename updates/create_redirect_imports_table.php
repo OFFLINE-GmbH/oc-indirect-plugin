@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Updates;
+namespace OFFLINE\Indirect\Updates;
 
 use Illuminate\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
@@ -9,13 +9,13 @@ use Schema;
 /**
  * Class CreateRedirectImportsTable
  *
- * @package Adrenth\Redirect\Updates
+ * @package OFFLINE\Indirect\Updates
  */
 class CreateRedirectImportsTable extends Migration
 {
     public function up()
     {
-        Schema::create('adrenth_redirect_redirect_imports', function (Blueprint $table) {
+        Schema::create('offline_indirect_redirect_imports', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->timestamps();
@@ -24,6 +24,6 @@ class CreateRedirectImportsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('adrenth_redirect_redirect_imports');
+        Schema::dropIfExists('offline_indirect_redirect_imports');
     }
 }

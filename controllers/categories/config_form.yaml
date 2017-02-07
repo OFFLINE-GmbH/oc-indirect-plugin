@@ -3,25 +3,25 @@
 # ===================================
 
 # Record name
-name: adrenth.redirect::lang.redirect.category
+name: OFFLINE.indirect::lang.redirect.category
 
 # Model Form Field configuration
-form: $/adrenth/redirect/models/category/fields.yaml
+form: $/offline/indirect/models/category/fields.yaml
 
 # Model Class name
-modelClass: Adrenth\Redirect\Models\Category
+modelClass: OFFLINE\Indirect\Models\Category
 
 # Default redirect location
-defaultRedirect: adrenth/redirect/categories
+defaultRedirect: offline/indirect/categories
 
 # Create page
 create:
-    title: adrenth.redirect::lang.title.create_category
-    redirect: adrenth/redirect/categories/update/:id
-    redirectClose: adrenth/redirect/categories
+    title: OFFLINE.indirect::lang.title.create_category
+    redirect: offline/indirect/categories/update/:id
+    redirectClose: offline/indirect/categories
 
 # Update page
 update:
-    title: adrenth.redirect::lang.title.edit_category
-    redirect: adrenth/redirect/categories
-    redirectClose: adrenth/redirect/categories
+    title: OFFLINE.indirect::lang.title.edit_category
+    redirect: offline/indirect/categories
+    redirectClose: offline/indirect/categories

@@ -1,13 +1,13 @@
 <?php
 
-namespace Adrenth\Redirect\Updates;
+namespace OFFLINE\Indirect\Updates;
 
 use October\Rain\Database\Updates\Seeder;
 
 /**
  * Class SeedRedirectsTable
  *
- * @package Adrenth\Redirect\Updates
+ * @package OFFLINE\Indirect\Updates
  */
 class SeedRedirectsTable extends Seeder
 {

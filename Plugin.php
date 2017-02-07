@@ -1,12 +1,12 @@
 <?php
 
-namespace Adrenth\Redirect;
+namespace OFFLINE\Indirect;
 
-use Adrenth\Redirect\Classes\PageHandler;
-use Adrenth\Redirect\Classes\PublishManager;
-use Adrenth\Redirect\Classes\RedirectManager;
-use Adrenth\Redirect\Classes\StaticPageHandler;
-use Adrenth\Redirect\Models\Redirect;
+use OFFLINE\Indirect\Classes\PageHandler;
+use OFFLINE\Indirect\Classes\PublishManager;
+use OFFLINE\Indirect\Classes\RedirectManager;
+use OFFLINE\Indirect\Classes\StaticPageHandler;
+use OFFLINE\Indirect\Models\Redirect;
 use App;
 use Backend;
 use Cms\Classes\Page;
@@ -17,7 +17,7 @@ use System\Classes\PluginBase;
 /**
  * Class Plugin
  *
- * @package Adrenth\Redirect
+ * @package OFFLINE\Indirect
  */
 class Plugin extends PluginBase
 {
@@ -27,11 +27,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'adrenth.redirect::lang.plugin.name',
-            'description' => 'adrenth.redirect::lang.plugin.description',
-            'author' => 'Alwin Drenth',
+            'name' => 'OFFLINE.indirect::lang.plugin.name',
+            'description' => 'OFFLINE.indirect::lang.plugin.description',
+            'author' => 'Tobias Kuenidg',
             'icon' => 'icon-link',
-            'homepage' => 'https://github.com/adrenth/redirect',
+            'homepage' => 'https://github.com/OFFLINE-GmbH/oc-indirect-plugin',
         ];
     }
 
@@ -122,9 +122,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'adrenth.redirect.access_redirects' => [
-                'label' => 'adrenth.redirect::lang.permission.access_redirects.label',
-                'tab' => 'adrenth.redirect::lang.permission.access_redirects.tab',
+            'OFFLINE.indirect.access_redirects' => [
+                'label' => 'OFFLINE.indirect::lang.permission.access_redirects.label',
+                'tab' => 'OFFLINE.indirect::lang.permission.access_redirects.tab',
             ],
         ];
     }
@@ -136,68 +136,68 @@ class Plugin extends PluginBase
     {
         return [
             'redirect' => [
-                'label' => 'adrenth.redirect::lang.navigation.menu_label',
+                'label' => 'OFFLINE.indirect::lang.navigation.menu_label',
                 'icon' => 'icon-link',
-                'url' => Backend::url('adrenth/redirect/statistics'),
+                'url' => Backend::url('offline/indirect/statistics'),
                 'order' => 50,
                 'permissions' => [
-                    'adrenth.redirect.access_redirects',
+                    'OFFLINE.indirect.access_redirects',
                 ],
                 'sideMenu' => [
                     'statistics' => [
                         'icon' => 'icon-bar-chart',
-                        'label' => 'adrenth.redirect::lang.title.statistics',
-                        'url' => Backend::url('adrenth/redirect/statistics'),
+                        'label' => 'OFFLINE.indirect::lang.title.statistics',
+                        'url' => Backend::url('offline/indirect/statistics'),
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'OFFLINE.indirect.access_redirects',
                         ],
                     ],
                     'redirects' => [
                         'icon' => 'icon-link',
-                        'label' => 'adrenth.redirect::lang.navigation.menu_label',
-                        'url' => Backend::url('adrenth/redirect/redirects'),
+                        'label' => 'OFFLINE.indirect::lang.navigation.menu_label',
+                        'url' => Backend::url('offline/indirect/redirects'),
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'OFFLINE.indirect.access_redirects',
                         ],
                     ],
                     'reorder' => [
-                        'label' => 'adrenth.redirect::lang.buttons.reorder_redirects',
-                        'url' => Backend::url('adrenth/redirect/redirects/reorder'),
+                        'label' => 'OFFLINE.indirect::lang.buttons.reorder_redirects',
+                        'url' => Backend::url('offline/indirect/redirects/reorder'),
                         'icon' => 'icon-sort-amount-asc',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'OFFLINE.indirect.access_redirects',
                         ],
                     ],
                     'logs' => [
-                        'label' => 'adrenth.redirect::lang.buttons.logs',
-                        'url' => Backend::url('adrenth/redirect/logs'),
+                        'label' => 'OFFLINE.indirect::lang.buttons.logs',
+                        'url' => Backend::url('offline/indirect/logs'),
                         'icon' => 'icon-file-text-o',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'OFFLINE.indirect.access_redirects',
                         ],
                     ],
                     'categories' => [
-                        'label' => 'adrenth.redirect::lang.buttons.categories',
-                        'url' => Backend::url('adrenth/redirect/categories'),
+                        'label' => 'OFFLINE.indirect::lang.buttons.categories',
+                        'url' => Backend::url('offline/indirect/categories'),
                         'icon' => 'icon-tag',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'OFFLINE.indirect.access_redirects',
                         ],
                     ],
                     'import' => [
-                        'label' => 'adrenth.redirect::lang.buttons.import',
-                        'url' => Backend::url('adrenth/redirect/redirects/import'),
+                        'label' => 'OFFLINE.indirect::lang.buttons.import',
+                        'url' => Backend::url('offline/indirect/redirects/import'),
                         'icon' => 'icon-download',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'OFFLINE.indirect.access_redirects',
                         ],
                     ],
                     'export' => [
-                        'label' => 'adrenth.redirect::lang.buttons.export',
-                        'url' => Backend::url('adrenth/redirect/redirects/export'),
+                        'label' => 'OFFLINE.indirect::lang.buttons.export',
+                        'url' => Backend::url('offline/indirect/redirects/export'),
                         'icon' => 'icon-upload',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'OFFLINE.indirect.access_redirects',
                         ],
                     ],
                 ],
@@ -223,9 +223,9 @@ class Plugin extends PluginBase
             'redirect_match_type' => function ($value) {
                 switch ($value) {
                     case Redirect::TYPE_EXACT:
-                        return e(trans('adrenth.redirect::lang.redirect.exact'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.exact'));
                     case Redirect::TYPE_PLACEHOLDERS:
-                        return e(trans('adrenth.redirect::lang.redirect.placeholders'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.placeholders'));
                     default:
                         return $value;
                 }
@@ -233,15 +233,15 @@ class Plugin extends PluginBase
             'redirect_status_code' => function ($value) {
                 switch ($value) {
                     case 301:
-                        return e(trans('adrenth.redirect::lang.redirect.permanent'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.permanent'));
                     case 302:
-                        return e(trans('adrenth.redirect::lang.redirect.temporary'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.temporary'));
                     case 303:
-                        return e(trans('adrenth.redirect::lang.redirect.see_other'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.see_other'));
                     case 404:
-                        return e(trans('adrenth.redirect::lang.redirect.not_found'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.not_found'));
                     case 410:
-                        return e(trans('adrenth.redirect::lang.redirect.gone'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.gone'));
                     default:
                         return $value;
                 }
@@ -249,11 +249,11 @@ class Plugin extends PluginBase
             'redirect_target_type' => function ($value) {
                 switch ($value) {
                     case Redirect::TARGET_TYPE_PATH_URL:
-                        return e(trans('adrenth.redirect::lang.redirect.target_type_path_or_url'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.target_type_path_or_url'));
                     case Redirect::TARGET_TYPE_CMS_PAGE:
-                        return e(trans('adrenth.redirect::lang.redirect.target_type_cms_page'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.target_type_cms_page'));
                     case Redirect::TARGET_TYPE_STATIC_PAGE:
-                        return e(trans('adrenth.redirect::lang.redirect.target_type_static_page'));
+                        return e(trans('OFFLINE.indirect::lang.redirect.target_type_static_page'));
                     default:
                         return $value;
                 }
@@ -272,7 +272,7 @@ class Plugin extends PluginBase
                 return sprintf(
                     '<span class="%s" title="%s"></span>',
                     $value ? 'oc-icon-magic' : 'oc-icon-user',
-                    e(trans('adrenth.redirect::lang.redirect.system_tip'))
+                    e(trans('OFFLINE.indirect::lang.redirect.system_tip'))
                 );
             },
         ];

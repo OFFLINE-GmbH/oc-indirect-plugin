@@ -1,11 +1,11 @@
 <?php
 
-namespace Adrenth\Redirect\Controllers;
+namespace OFFLINE\Indirect\Controllers;
 
-use Adrenth\Redirect\Classes\PublishManager;
-use Adrenth\Redirect\Classes\RedirectManager;
-use Adrenth\Redirect\Classes\RedirectRule;
-use Adrenth\Redirect\Models\Redirect;
+use OFFLINE\Indirect\Classes\PublishManager;
+use OFFLINE\Indirect\Classes\RedirectManager;
+use OFFLINE\Indirect\Classes\RedirectRule;
+use OFFLINE\Indirect\Models\Redirect;
 use ApplicationException;
 use Backend\Behaviors\FormController;
 use Backend\Behaviors\ImportExportController;
@@ -31,7 +31,7 @@ use System\Models\RequestLog;
 /**
  * Class Redirects
  *
- * @package Adrenth\Redirect\Controllers
+ * @package OFFLINE\Indirect\Controllers
  * @mixin FormController
  * @mixin ListController
  * @mixin ReorderController
@@ -78,9 +78,9 @@ class Redirects extends Controller
             ? $this->action
             : 'redirects';
 
-        BackendMenu::setContext('Adrenth.Redirect', 'redirect', $sideMenuItemCode);
+        BackendMenu::setContext('OFFLINE.indirect', 'redirect', $sideMenuItemCode);
 
-        $this->requiredPermissions = ['adrenth.redirect.access_redirects'];
+        $this->requiredPermissions = ['OFFLINE.indirect.access_redirects'];
 
         $this->vars['match'] = null;
     }
@@ -101,7 +101,7 @@ class Redirects extends Controller
         if ($redirect->getAttribute('target_type') === Redirect::TARGET_TYPE_STATIC_PAGE
             && !class_exists('\RainLab\Pages\Classes\Page')
         ) {
-            Flash::error(Lang::get('adrenth.redirect::lang.flash.static_page_redirect_not_supported'));
+            Flash::error(Lang::get('OFFLINE.indirect::lang.flash.static_page_redirect_not_supported'));
             return RedirectFacade::back();
         }
 
@@ -253,7 +253,7 @@ class Redirects extends Controller
             Event::fire('redirects.changed');
 
             Flash::success(Lang::get(
-                'adrenth.redirect::lang.flash.success_created_redirects',
+                'OFFLINE.indirect::lang.flash.success_created_redirects',
                 [
                     'count' => $redirectsCreated,
                 ]

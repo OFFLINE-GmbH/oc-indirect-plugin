@@ -1,10 +1,10 @@
 <?php
 
-namespace Adrenth\Redirect\Tests;
+namespace OFFLINE\Indirect\Tests;
 
-use Adrenth\Redirect\Classes\RedirectManager;
-use Adrenth\Redirect\Classes\RedirectRule;
-use Adrenth\Redirect\Models\Redirect;
+use OFFLINE\Indirect\Classes\RedirectManager;
+use OFFLINE\Indirect\Classes\RedirectRule;
+use OFFLINE\Indirect\Models\Redirect;
 use Carbon\Carbon;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
@@ -13,7 +13,7 @@ use PluginTestCase;
 /**
  * Class RedirectManagerTest
  *
- * @package Adrenth\Redirect\Tests
+ * @package OFFLINE\Indirect\Tests
  */
 class RedirectManagerTest extends PluginTestCase
 {
@@ -103,13 +103,13 @@ class RedirectManagerTest extends PluginTestCase
 
     public function testTargetCmsPageRedirect()
     {
-        $page = Page::load(Theme::getActiveTheme(), 'adrenth-redirect-testpage');
+        $page = Page::load(Theme::getActiveTheme(), 'OFFLINE-redirect-testpage');
 
         if ($page === null) {
             $page = new Page();
             $page->title = 'Testpage';
-            $page->url = '/adrenth/redirect/testpage';
-            $page->setFileNameAttribute('adrenth-redirect-testpage');
+            $page->url = '/offline/indirect/testpage';
+            $page->setFileNameAttribute('OFFLINE-redirect-testpage');
             $page->save();
         }
 
@@ -117,7 +117,7 @@ class RedirectManagerTest extends PluginTestCase
             'match_type' => Redirect::TYPE_EXACT,
             'target_type' => Redirect::TARGET_TYPE_CMS_PAGE,
             'from_url' => '/this-should-be-source',
-            'cms_page' => 'adrenth-redirect-testpage',
+            'cms_page' => 'OFFLINE-redirect-testpage',
             'requirements' => null,
             'status_code' => 302,
             'from_date' => Carbon::now(),
@@ -135,7 +135,7 @@ class RedirectManagerTest extends PluginTestCase
         $result = $manager->match('/this-should-be-source');
 
         self::assertInstanceOf(RedirectRule::class, $result);
-        self::assertEquals('http://localhost/adrenth/redirect/testpage', $manager->getLocation($result));
+        self::assertEquals('http://localhost/offline/indirect/testpage', $manager->getLocation($result));
 
         self::assertTrue($page->delete());
     }

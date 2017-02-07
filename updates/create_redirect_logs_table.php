@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Updates;
+namespace OFFLINE\Indirect\Updates;
 
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
@@ -9,13 +9,13 @@ use Schema;
 /**
  * Class CreateRedirectLogsTable
  *
- * @package Adrenth\Redirect\Updates
+ * @package OFFLINE\Indirect\Updates
  */
 class CreateRedirectLogsTable extends Migration
 {
     public function up()
     {
-        Schema::create('adrenth_redirect_redirect_logs', function (Blueprint $table) {
+        Schema::create('offline_indirect_redirect_logs', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->unsignedInteger('redirect_id');
@@ -32,17 +32,17 @@ class CreateRedirectLogsTable extends Migration
 
             $table->foreign('redirect_id', 'redirect_log')
                 ->references('id')
-                ->on('adrenth_redirect_redirects')
+                ->on('offline_indirect_redirects')
                 ->onDelete('cascade');
         });
     }
 
     public function down()
     {
-        Schema::table('adrenth_redirect_redirect_logs', function (Blueprint $table) {
+        Schema::table('offline_indirect_redirect_logs', function (Blueprint $table) {
             $table->dropForeign('redirect_log');
         });
 
-        Schema::dropIfExists('adrenth_redirect_redirect_logs');
+        Schema::dropIfExists('offline_indirect_redirect_logs');
     }
 }

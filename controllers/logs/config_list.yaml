@@ -3,18 +3,18 @@
 # ===================================
 
 # Model List Column configuration
-list: $/adrenth/redirect/models/redirectlog/columns.yaml
+list: $/offline/indirect/models/redirectlog/columns.yaml
 
 filter: config_filter.yaml
 
 # Model Class name
-modelClass: Adrenth\Redirect\Models\RedirectLog
+modelClass: OFFLINE\Indirect\Models\RedirectLog
 
 # List Title
-title: adrenth.redirect::lang.title.view_redirect_log
+title: OFFLINE.indirect::lang.title.view_redirect_log
 
 # Link URL for each record
-recordUrl: adrenth/redirect/redirects/update/:redirect_id
+recordUrl: offline/indirect/redirects/update/:redirect_id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

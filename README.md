@@ -1,8 +1,10 @@
-# Adrenth.Redirect
+# OFFLINE.Indirect
 
-## The #1 Redirect plugin for October CMS
+## The #2 Redirect plugin for October CMS
 
-This is the best Redirect-plugin for October CMS. With this plugin installed you can manage redirects directly from October CMS' beautiful interface. Many webmasters and SEO specialists use redirects to optimize their website for search engines. This plugin allows you to manage such redirects with a nice and user-friendly interface.
+> This is a fork of http://octobercms.com/plugin/adrenth-redirect before it went paid (v2.0.24). The plugin is licensed under the MIT license and won't be actively developed. This fork is for users of the awesome redirect plugin that want to continue to use the old version.
+
+This is the second best Redirect-plugin for October CMS. The best one is [Adrenth.Redirect](http://octobercms.com/plugin/adrenth-redirect) by Alwin Drenth. With this plugin installed you can manage redirects directly from October CMS' beautiful interface. Many webmasters and SEO specialists use redirects to optimize their website for search engines. This plugin allows you to manage such redirects with a nice and user-friendly interface.
 
 ## What does this plugin offer?
 
@@ -151,14 +153,10 @@ This plugin makes advantage of the `symfony/routing` package. So if you need mor
 
 ## Contribution
 
-If you like to contribute to this plugin feel free to create a Pull Request. But you can also contact me. My contact details can be found in the source code of this project.
+If you like to contribute to this plugin feel free to create a Pull Request.
 
 ## Questions? Need help?
 
-If you have any question about how to use this plugin, please don't hesitate to contact me. I'm happy to help you.
+If you have any question about how to use this plugin, please don't hesitate to contact us. We're happy to help you.
 
-You can also create an issue on the [GitHub](https://github.com/adrenth/redirect) page of this plugin.
-
-Kind regards,
-
-Alwin Drenth -- *Author of the Redirect plugin*
+You can also create an issue on the [GitHub](https://github.com/OFFLINE-GmbH/indirect) page of this plugin.

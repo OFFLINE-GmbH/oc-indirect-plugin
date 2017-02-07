@@ -1,16 +1,16 @@
 <?php
 
-namespace Adrenth\Redirect\Tests;
+namespace OFFLINE\Indirect\Tests;
 
-use Adrenth\Redirect\Classes\RedirectRule;
-use Adrenth\Redirect\Models\Redirect;
+use OFFLINE\Indirect\Classes\RedirectRule;
+use OFFLINE\Indirect\Models\Redirect;
 use Carbon\Carbon;
 use PluginTestCase;
 
 /**
  * Class RedirectRuleTest
  *
- * @package Adrenth\Redirect\Tests
+ * @package OFFLINE\Indirect\Tests
  */
 class RedirectRuleTest extends PluginTestCase
 {

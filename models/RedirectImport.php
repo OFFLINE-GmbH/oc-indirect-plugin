@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Models;
+namespace OFFLINE\Indirect\Models;
 
 use Backend\Models\ImportModel;
 
@@ -9,14 +9,14 @@ use Backend\Models\ImportModel;
 /**
  * Class RedirectImport
  *
- * @package Adrenth\Redirect\Models
+ * @package OFFLINE\Indirect\Models
  */
 class RedirectImport extends ImportModel
 {
     /**
      * {@inheritdoc}
      */
-    public $table = 'adrenth_redirect_redirects';
+    public $table = 'offline_indirect_redirects';
 
     /**
      * Validation rules

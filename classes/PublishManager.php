@@ -1,8 +1,8 @@
 <?php
 
-namespace Adrenth\Redirect\Classes;
+namespace OFFLINE\Indirect\Classes;
 
-use Adrenth\Redirect\Models\Redirect;
+use OFFLINE\Indirect\Models\Redirect;
 use Illuminate\Database\Eloquent\Collection;
 use League\Csv\Writer;
 use Log;
@@ -11,7 +11,7 @@ use October\Rain\Support\Traits\Singleton;
 /**
  * Class PublishManager
  *
- * @package Adrenth\Redirect\Classes
+ * @package OFFLINE\Indirect\Classes
  */
 class PublishManager
 {

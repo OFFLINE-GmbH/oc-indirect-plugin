@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Updates;
+namespace OFFLINE\Indirect\Updates;
 
 use Illuminate\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
@@ -9,11 +9,11 @@ use Schema;
 /**
  * Class AddTestUrlToRedirectsTable
  *
- * @package Adrenth\Redirect\Updates
+ * @package OFFLINE\Indirect\Updates
  */
 class AddTestUrlToRedirectsTable extends Migration
 {
-    const TABLE = 'adrenth_redirect_redirects';
+    const TABLE = 'offline_indirect_redirects';
 
     public function up()
     {

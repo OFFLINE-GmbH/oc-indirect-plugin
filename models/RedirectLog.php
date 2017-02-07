@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Models;
+namespace OFFLINE\Indirect\Models;
 
 use Eloquent;
 use October\Rain\Database\Model;
@@ -10,7 +10,7 @@ use October\Rain\Database\Model;
 /**
  * Class RedirectLog
  *
- * @package Adrenth\Redirect\Models
+ * @package OFFLINE\Indirect\Models
  * @mixin Eloquent
  */
 class RedirectLog extends Model
@@ -18,7 +18,7 @@ class RedirectLog extends Model
     /**
      * {@inheritdoc}
      */
-    public $table = 'adrenth_redirect_redirect_logs';
+    public $table = 'offline_indirect_redirect_logs';
 
     /**
      * {@inheritdoc}

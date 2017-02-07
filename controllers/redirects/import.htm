@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('adrenth/redirect/redirects') ?>"><?= e(trans('adrenth.redirect::lang.navigation.menu_label')) ?></a></li>
+        <li><a href="<?= Backend::url('offline/indirect/redirects') ?>"><?= e(trans('OFFLINE.indirect::lang.navigation.menu_label')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -16,7 +16,7 @@
             data-handler="onImportLoadForm"
             data-keyboard="false"
             class="btn btn-primary">
-            <?= e(trans('adrenth.redirect::lang.buttons.import')) ?>
+            <?= e(trans('OFFLINE.indirect::lang.buttons.import')) ?>
         </button>
     </div>
 <?= Form::close() ?>

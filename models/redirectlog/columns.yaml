@@ -4,15 +4,15 @@
 
 columns:
     from_url:
-        label: adrenth.redirect::lang.redirect.from_url
+        label: OFFLINE.indirect::lang.redirect.from_url
         type: redirect_from_url
         searchable: true
     to_url:
-        label: adrenth.redirect::lang.redirect.to_url
+        label: OFFLINE.indirect::lang.redirect.to_url
         searchable: true
     date_time:
-        label: adrenth.redirect::lang.redirect.date_time
+        label: OFFLINE.indirect::lang.redirect.date_time
         type: datetime
     status_code:
-        label: adrenth.redirect::lang.redirect.status_code
+        label: OFFLINE.indirect::lang.redirect.status_code
         type: redirect_status_code
