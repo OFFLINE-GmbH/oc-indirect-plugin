@@ -36,7 +36,7 @@ class Logs extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('OFFLINE.indirect', 'redirect', 'logs');
+        BackendMenu::setContext('OFFLINE.Indirect', 'redirect', 'logs');
     }
 
     // @codingStandardsIgnoreStart

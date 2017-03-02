@@ -15,7 +15,7 @@ class Statistics extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('OFFLINE.indirect', 'redirect', 'statistics');
+        BackendMenu::setContext('OFFLINE.Indirect', 'redirect', 'statistics');
 
         $this->pageTitle = trans('offline.indirect::lang.title.statistics');
     }

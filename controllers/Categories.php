@@ -39,6 +39,6 @@ class Categories extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('OFFLINE.indirect', 'redirect', 'categories');
+        BackendMenu::setContext('OFFLINE.Indirect', 'redirect', 'categories');
     }
 }

@@ -78,7 +78,7 @@ class Redirects extends Controller
             ? $this->action
             : 'redirects';
 
-        BackendMenu::setContext('OFFLINE.indirect', 'redirect', $sideMenuItemCode);
+        BackendMenu::setContext('OFFLINE.Indirect', 'redirect', $sideMenuItemCode);
 
         $this->requiredPermissions = ['OFFLINE.indirect.access_redirects'];
 
