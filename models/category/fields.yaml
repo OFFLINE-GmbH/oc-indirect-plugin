@@ -4,5 +4,5 @@
 
 fields:
     name:
-        label: OFFLINE.indirect::lang.redirect.name
+        label: offline.indirect::lang.redirect.name
         span: left

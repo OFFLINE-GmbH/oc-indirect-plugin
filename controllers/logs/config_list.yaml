@@ -11,7 +11,7 @@ filter: config_filter.yaml
 modelClass: OFFLINE\Indirect\Models\RedirectLog
 
 # List Title
-title: OFFLINE.indirect::lang.title.view_redirect_log
+title: offline.indirect::lang.title.view_redirect_log
 
 # Link URL for each record
 recordUrl: offline/indirect/redirects/update/:redirect_id

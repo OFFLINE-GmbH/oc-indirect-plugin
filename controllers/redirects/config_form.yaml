@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: OFFLINE.indirect::lang.redirect.redirect
+name: offline.indirect::lang.redirect.redirect
 
 # Model Form Field configuration
 form: $/offline/indirect/models/redirect/fields.yaml
@@ -16,12 +16,12 @@ defaultRedirect: offline/indirect/redirects
 
 # Create page
 create:
-    title: OFFLINE.indirect::lang.title.create_redirect
+    title: offline.indirect::lang.title.create_redirect
     redirect: offline/indirect/redirects/update/:id
     redirectClose: offline/indirect/redirects
 
 # Update page
 update:
-    title: OFFLINE.indirect::lang.title.edit_redirect
+    title: offline.indirect::lang.title.edit_redirect
     redirect: offline/indirect/redirects
     redirectClose: offline/indirect/redirects

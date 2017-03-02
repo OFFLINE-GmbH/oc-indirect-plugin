@@ -3,7 +3,7 @@
 # ===================================
 
 # Reorder Title
-title: OFFLINE.indirect::lang.redirect.reorder_redirects
+title: offline.indirect::lang.redirect.reorder_redirects
 
 # Attribute name
 nameFrom: from_url

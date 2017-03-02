@@ -9,13 +9,13 @@ list: $/offline/indirect/models/redirect/columns.yaml
 modelClass: OFFLINE\Indirect\Models\Redirect
 
 # List Title
-title: OFFLINE.indirect::lang.title.redirects
+title: offline.indirect::lang.title.redirects
 
 # Link URL for each record
 recordUrl: offline/indirect/redirects/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: OFFLINE.indirect::lang.list.no_records
+noRecordsMessage: offline.indirect::lang.list.no_records
 
 # Records to display per page
 recordsPerPage: 20

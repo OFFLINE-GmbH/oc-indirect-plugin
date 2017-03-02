@@ -9,7 +9,7 @@ list: $/offline/indirect/models/category/columns.yaml
 modelClass: OFFLINE\Indirect\Models\Category
 
 # List Title
-title: OFFLINE.indirect::lang.title.categories
+title: offline.indirect::lang.title.categories
 
 # Link URL for each record
 recordUrl: offline/indirect/categories/update/:id

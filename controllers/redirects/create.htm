@@ -1,7 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
         <li><a href="<?= Backend::url('system/settings') ?>"><?= e(trans('system::lang.settings.menu_label')) ?></a></li>
-        <li><a href="<?= Backend::url('offline/indirect/redirects') ?>"><?= e(trans('OFFLINE.indirect::lang.navigation.menu_label')) ?></a></li>
+        <li><a href="<?= Backend::url('offline/indirect/redirects') ?>"><?= e(trans('offline.indirect::lang.navigation.menu_label')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -44,6 +44,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('offline/indirect/redirects') ?>" class="btn btn-default"><?= e(trans('OFFLINE.indirect::lang.redirect.return_to_redirects')) ?></a></p>
+    <p><a href="<?= Backend::url('offline/indirect/redirects') ?>" class="btn btn-default"><?= e(trans('offline.indirect::lang.redirect.return_to_redirects')) ?></a></p>
 
 <?php endif ?>

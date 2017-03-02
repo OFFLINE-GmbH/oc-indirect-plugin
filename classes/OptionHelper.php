@@ -21,9 +21,9 @@ class OptionHelper
     public static function getTargetTypeOptions()
     {
         return [
-            Redirect::TARGET_TYPE_PATH_URL => 'OFFLINE.indirect::lang.redirect.target_type_path_or_url',
-            Redirect::TARGET_TYPE_CMS_PAGE => 'OFFLINE.indirect::lang.redirect.target_type_cms_page',
-            Redirect::TARGET_TYPE_STATIC_PAGE => 'OFFLINE.indirect::lang.redirect.target_type_static_page',
+            Redirect::TARGET_TYPE_PATH_URL => 'offline.indirect::lang.redirect.target_type_path_or_url',
+            Redirect::TARGET_TYPE_CMS_PAGE => 'offline.indirect::lang.redirect.target_type_cms_page',
+            Redirect::TARGET_TYPE_STATIC_PAGE => 'offline.indirect::lang.redirect.target_type_static_page',
         ];
     }
 

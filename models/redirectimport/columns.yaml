@@ -1,16 +1,16 @@
 columns:
     id: ID
-    match_type: OFFLINE.indirect::lang.redirect.match_type
-    from_url: OFFLINE.indirect::lang.redirect.from_url
-    to_url: OFFLINE.indirect::lang.redirect.to_url
-    test_url: OFFLINE.indirect::lang.test.input_path
-    requirements: OFFLINE.indirect::lang.redirect.requirements
-    status_code: OFFLINE.indirect::lang.redirect.status_code
-    hits: OFFLINE.indirect::lang.redirect.hits
-    sort_order: OFFLINE.indirect::lang.redirect.sort_order
-    from_date: OFFLINE.indirect::lang.scheduling.from_date
-    to_date: OFFLINE.indirect::lang.scheduling.to_date
-    is_enabled: OFFLINE.indirect::lang.redirect.enabled
-    last_used_at: OFFLINE.indirect::lang.redirect.last_used_at
-    created_at: OFFLINE.indirect::lang.redirect.created_at
-    updated_at: OFFLINE.indirect::lang.redirect.modified_at
+    match_type: offline.indirect::lang.redirect.match_type
+    from_url: offline.indirect::lang.redirect.from_url
+    to_url: offline.indirect::lang.redirect.to_url
+    test_url: offline.indirect::lang.test.input_path
+    requirements: offline.indirect::lang.redirect.requirements
+    status_code: offline.indirect::lang.redirect.status_code
+    hits: offline.indirect::lang.redirect.hits
+    sort_order: offline.indirect::lang.redirect.sort_order
+    from_date: offline.indirect::lang.scheduling.from_date
+    to_date: offline.indirect::lang.scheduling.to_date
+    is_enabled: offline.indirect::lang.redirect.enabled
+    last_used_at: offline.indirect::lang.redirect.last_used_at
+    created_at: offline.indirect::lang.redirect.created_at
+    updated_at: offline.indirect::lang.redirect.modified_at

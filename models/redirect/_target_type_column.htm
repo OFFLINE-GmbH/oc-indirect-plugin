@@ -3,9 +3,9 @@ use OFFLINE\Indirect\Models\Redirect;
 ?>
 
 <?php if ($value === Redirect::TARGET_TYPE_PATH_URL): ?>
-    <?= e(trans('OFFLINE.indirect::lang.redirect.target_type_path_or_url')) ?>
+    <?= e(trans('offline.indirect::lang.redirect.target_type_path_or_url')) ?>
 <?php elseif ($value === Redirect::TARGET_TYPE_CMS_PAGE): ?>
-    <?= e(trans('OFFLINE.indirect::lang.redirect.target_type_cms_page')) ?>
+    <?= e(trans('offline.indirect::lang.redirect.target_type_cms_page')) ?>
 <?php elseif ($value === Redirect::TARGET_TYPE_STATIC_PAGE): ?>
-    <?= e(trans('OFFLINE.indirect::lang.redirect.target_type_static_page')) ?>
+    <?= e(trans('offline.indirect::lang.redirect.target_type_static_page')) ?>
 <?php endif; ?>

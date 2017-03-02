@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: OFFLINE.indirect::lang.redirect.category
+name: offline.indirect::lang.redirect.category
 
 # Model Form Field configuration
 form: $/offline/indirect/models/category/fields.yaml
@@ -16,12 +16,12 @@ defaultRedirect: offline/indirect/categories
 
 # Create page
 create:
-    title: OFFLINE.indirect::lang.title.create_category
+    title: offline.indirect::lang.title.create_category
     redirect: offline/indirect/categories/update/:id
     redirectClose: offline/indirect/categories
 
 # Update page
 update:
-    title: OFFLINE.indirect::lang.title.edit_category
+    title: offline.indirect::lang.title.edit_category
     redirect: offline/indirect/categories
     redirectClose: offline/indirect/categories

@@ -4,11 +4,11 @@
 
 scopes:
     date_time:
-        label: OFFLINE.indirect::lang.redirect.date
+        label: offline.indirect::lang.redirect.date
         type: date
         conditions: date_time >= ':filtered'
     status_code:
-        label: OFFLINE.indirect::lang.redirect.status_code
+        label: offline.indirect::lang.redirect.status_code
         type: group
         modelClass: OFFLINE\Indirect\Models\Redirect
         options: filterStatusCodeOptions

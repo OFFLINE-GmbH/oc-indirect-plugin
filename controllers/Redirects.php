@@ -101,7 +101,7 @@ class Redirects extends Controller
         if ($redirect->getAttribute('target_type') === Redirect::TARGET_TYPE_STATIC_PAGE
             && !class_exists('\RainLab\Pages\Classes\Page')
         ) {
-            Flash::error(Lang::get('OFFLINE.indirect::lang.flash.static_page_redirect_not_supported'));
+            Flash::error(Lang::get('offline.indirect::lang.flash.static_page_redirect_not_supported'));
             return RedirectFacade::back();
         }
 
@@ -253,7 +253,7 @@ class Redirects extends Controller
             Event::fire('redirects.changed');
 
             Flash::success(Lang::get(
-                'OFFLINE.indirect::lang.flash.success_created_redirects',
+                'offline.indirect::lang.flash.success_created_redirects',
                 [
                     'count' => $redirectsCreated,
                 ]

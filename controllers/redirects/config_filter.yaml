@@ -1,36 +1,36 @@
 scopes:
     system:
-        label: OFFLINE.indirect::lang.list.switch_system
+        label: offline.indirect::lang.list.switch_system
         type: switch
         conditions:
             - system <> true
             - system = true
     is_enabled:
-        label: OFFLINE.indirect::lang.list.switch_is_enabled
+        label: offline.indirect::lang.list.switch_is_enabled
         type: switch
         conditions:
             - is_enabled <> true
             - is_enabled = true
     match_type:
-        label: OFFLINE.indirect::lang.redirect.match_type
+        label: offline.indirect::lang.redirect.match_type
         type: group
         modelClass: OFFLINE\Indirect\Models\Redirect
         options: filterMatchTypeOptions
         conditions: match_type in (:filtered)
     target_type:
-        label: OFFLINE.indirect::lang.redirect.target_type
+        label: offline.indirect::lang.redirect.target_type
         type: group
         modelClass: OFFLINE\Indirect\Models\Redirect
         options: filterTargetTypeOptions
         conditions: target_type in (:filtered)
     status_code:
-        label: OFFLINE.indirect::lang.redirect.status_code
+        label: offline.indirect::lang.redirect.status_code
         type: group
         modelClass: OFFLINE\Indirect\Models\Redirect
         options: filterStatusCodeOptions
         conditions: status_code in (:filtered)
     category:
-        label: OFFLINE.indirect::lang.redirect.category
+        label: offline.indirect::lang.redirect.category
         modelClass: OFFLINE\Indirect\Models\Category
         conditions: category_id in (:filtered)
         nameFrom: name

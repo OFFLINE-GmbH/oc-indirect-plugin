@@ -49,7 +49,7 @@ class Logs extends Controller
     public function index_onEmptyLog()
     {
         RedirectLog::truncate();
-        Flash::success(Lang::get('OFFLINE.indirect::lang.flash.truncate_success'));
+        Flash::success(Lang::get('offline.indirect::lang.flash.truncate_success'));
         return $this->listRefresh();
     }
 
@@ -66,7 +66,7 @@ class Logs extends Controller
                 $record->delete();
             }
 
-            Flash::success(Lang::get('OFFLINE.indirect::lang.flash.delete_selected_success'));
+            Flash::success(Lang::get('offline.indirect::lang.flash.delete_selected_success'));
         }
         else {
             Flash::error(Lang::get('backend::lang.list.delete_selected_empty'));

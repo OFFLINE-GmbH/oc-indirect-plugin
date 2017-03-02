@@ -17,7 +17,7 @@ class Statistics extends Controller
 
         BackendMenu::setContext('OFFLINE.indirect', 'redirect', 'statistics');
 
-        $this->pageTitle = trans('OFFLINE.indirect::lang.title.statistics');
+        $this->pageTitle = trans('offline.indirect::lang.title.statistics');
     }
 
     public function index()

@@ -4,25 +4,25 @@
 
 fields:
     from_url:
-        label: OFFLINE.indirect::lang.redirect.from_url
-        placeholder: OFFLINE.indirect::lang.redirect.from_url_placeholder
+        label: offline.indirect::lang.redirect.from_url
+        placeholder: offline.indirect::lang.redirect.from_url_placeholder
         type: text
         span: left
-        comment: OFFLINE.indirect::lang.redirect.from_url_comment
+        comment: offline.indirect::lang.redirect.from_url_comment
         required: true
     to_url:
-        label: OFFLINE.indirect::lang.redirect.to_url
-        placeholder: OFFLINE.indirect::lang.redirect.to_url_placeholder
+        label: offline.indirect::lang.redirect.to_url
+        placeholder: offline.indirect::lang.redirect.to_url_placeholder
         type: text
         span: right
-        comment: OFFLINE.indirect::lang.redirect.to_url_comment
+        comment: offline.indirect::lang.redirect.to_url_comment
         cssClass: redirect-target
         trigger:
             action: show
             field: target_type
             condition: value[path_or_url]
     cms_page:
-        label: OFFLINE.indirect::lang.redirect.target_type_cms_page
+        label: offline.indirect::lang.redirect.target_type_cms_page
         span: right
         type: dropdown
         cssClass: redirect-target
@@ -31,7 +31,7 @@ fields:
             field: target_type
             condition: value[cms_page]
     static_page:
-        label: OFFLINE.indirect::lang.redirect.target_type_static_page
+        label: offline.indirect::lang.redirect.target_type_static_page
         span: right
         type: dropdown
         cssClass: redirect-target
@@ -41,53 +41,53 @@ fields:
             condition: value[static_page]
 
 tabs:
-    defaultTab: OFFLINE.indirect::lang.tab.tab_general
+    defaultTab: offline.indirect::lang.tab.tab_general
     fields:
         #
         # General
         #
         target_type:
-            label: OFFLINE.indirect::lang.redirect.target_type
+            label: offline.indirect::lang.redirect.target_type
             required: true
             type: dropdown
             default: path_or_url
             span: left
         match_type:
-            label: OFFLINE.indirect::lang.redirect.match_type
+            label: offline.indirect::lang.redirect.match_type
             type: dropdown
             required: true
             span: right
             options:
-                exact: OFFLINE.indirect::lang.redirect.exact
-                placeholders: OFFLINE.indirect::lang.redirect.placeholders
+                exact: offline.indirect::lang.redirect.exact
+                placeholders: offline.indirect::lang.redirect.placeholders
         status_code:
-            label: OFFLINE.indirect::lang.redirect.status_code
+            label: offline.indirect::lang.redirect.status_code
             type: dropdown
             required: true
             span: left
             options:
-                301: OFFLINE.indirect::lang.redirect.permanent
-                302: OFFLINE.indirect::lang.redirect.temporary
-                303: OFFLINE.indirect::lang.redirect.see_other
-                404: OFFLINE.indirect::lang.redirect.not_found
-                410: OFFLINE.indirect::lang.redirect.gone
+                301: offline.indirect::lang.redirect.permanent
+                302: offline.indirect::lang.redirect.temporary
+                303: offline.indirect::lang.redirect.see_other
+                404: offline.indirect::lang.redirect.not_found
+                410: offline.indirect::lang.redirect.gone
             attributes:
                 onchange: "$('div[data-field-name=to_url]').toggleClass('hidden', $(this).val().charAt(0) === '4');$('div.status-info').hide();$('#info' + $(this).val()).show();"
         sort_order:
-            label: OFFLINE.indirect::lang.redirect.priority
+            label: offline.indirect::lang.redirect.priority
             type: text
             span: right
         status_code_info:
             type: partial
             span: left
         category:
-            label: OFFLINE.indirect::lang.redirect.category
+            label: offline.indirect::lang.redirect.category
             span: right
             nameFrom: name
             type: relation
         is_enabled:
-            label: OFFLINE.indirect::lang.redirect.enabled
-            comment: OFFLINE.indirect::lang.redirect.enabled_comment
+            label: offline.indirect::lang.redirect.enabled
+            comment: offline.indirect::lang.redirect.enabled_comment
             span: right
             type: switch
             default: true
@@ -95,18 +95,18 @@ tabs:
         # Requirements
         #
         section_requirements:
-            tab: OFFLINE.indirect::lang.tab.tab_requirements
+            tab: offline.indirect::lang.tab.tab_requirements
             type: section
-            commentAbove: OFFLINE.indirect::lang.redirect.requirements_comment
+            commentAbove: offline.indirect::lang.redirect.requirements_comment
             trigger:
                 action: show
                 field: match_type
                 condition: value[placeholders]
         requirements:
-            tab: OFFLINE.indirect::lang.tab.tab_requirements
+            tab: offline.indirect::lang.tab.tab_requirements
             type: repeater
             span: full
-            prompt: OFFLINE.indirect::lang.redirect.requirements_prompt
+            prompt: offline.indirect::lang.redirect.requirements_prompt
             trigger:
                 action: show
                 field: match_type
@@ -114,20 +114,20 @@ tabs:
             form:
                 fields:
                     placeholder:
-                        label: OFFLINE.indirect::lang.redirect.placeholder
-                        comment: OFFLINE.indirect::lang.redirect.placeholder_comment
+                        label: offline.indirect::lang.redirect.placeholder
+                        comment: offline.indirect::lang.redirect.placeholder_comment
                         type: text
                         span: left
                         required: true
                     requirement:
-                        label: OFFLINE.indirect::lang.redirect.requirement
-                        comment: OFFLINE.indirect::lang.redirect.requirement_comment
+                        label: offline.indirect::lang.redirect.requirement
+                        comment: offline.indirect::lang.redirect.requirement_comment
                         type: text
                         span: right
                         required: true
                     replacement:
-                        label: OFFLINE.indirect::lang.redirect.replacement
-                        comment: OFFLINE.indirect::lang.redirect.replacement_comment
+                        label: offline.indirect::lang.redirect.replacement
+                        comment: offline.indirect::lang.redirect.replacement_comment
                         span: left
                         required: false
 
@@ -135,35 +135,35 @@ tabs:
         # Test
         #
         section_test:
-            tab: OFFLINE.indirect::lang.tab.tab_test
+            tab: offline.indirect::lang.tab.tab_test
             type: section
-            commentAbove: OFFLINE.indirect::lang.test.test_comment
+            commentAbove: offline.indirect::lang.test.test_comment
         test_url:
-            tab: OFFLINE.indirect::lang.tab.tab_test
+            tab: offline.indirect::lang.tab.tab_test
             type: text
             hidden: true
         test:
-            tab: OFFLINE.indirect::lang.tab.tab_test
+            tab: offline.indirect::lang.tab.tab_test
             type: partial
             path: redirect_test
         #
         # Scheduling
         #
         section_scheduling:
-            tab: OFFLINE.indirect::lang.tab.tab_scheduling
+            tab: offline.indirect::lang.tab.tab_scheduling
             type: section
-            commentAbove: OFFLINE.indirect::lang.scheduling.scheduling_comment
+            commentAbove: offline.indirect::lang.scheduling.scheduling_comment
         from_date:
-            tab: OFFLINE.indirect::lang.tab.tab_scheduling
-            label: OFFLINE.indirect::lang.scheduling.from_date
-            comment: OFFLINE.indirect::lang.scheduling.from_date_comment
+            tab: offline.indirect::lang.tab.tab_scheduling
+            label: offline.indirect::lang.scheduling.from_date
+            comment: offline.indirect::lang.scheduling.from_date_comment
             type: datepicker
             mode: date
             span: left
         to_date:
-            tab: OFFLINE.indirect::lang.tab.tab_scheduling
-            label: OFFLINE.indirect::lang.scheduling.to_date
-            comment: OFFLINE.indirect::lang.scheduling.to_date_comment
+            tab: offline.indirect::lang.tab.tab_scheduling
+            label: offline.indirect::lang.scheduling.to_date
+            comment: offline.indirect::lang.scheduling.to_date_comment
             type: datepicker
             mode: date
             span: right

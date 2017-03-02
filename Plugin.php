@@ -27,8 +27,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'OFFLINE.indirect::lang.plugin.name',
-            'description' => 'OFFLINE.indirect::lang.plugin.description',
+            'name' => 'offline.indirect::lang.plugin.name',
+            'description' => 'offline.indirect::lang.plugin.description',
             'author' => 'Tobias Kuenidg',
             'icon' => 'icon-link',
             'homepage' => 'https://github.com/OFFLINE-GmbH/oc-indirect-plugin',
@@ -123,8 +123,8 @@ class Plugin extends PluginBase
     {
         return [
             'OFFLINE.indirect.access_redirects' => [
-                'label' => 'OFFLINE.indirect::lang.permission.access_redirects.label',
-                'tab' => 'OFFLINE.indirect::lang.permission.access_redirects.tab',
+                'label' => 'offline.indirect::lang.permission.access_redirects.label',
+                'tab' => 'offline.indirect::lang.permission.access_redirects.tab',
             ],
         ];
     }
@@ -136,7 +136,7 @@ class Plugin extends PluginBase
     {
         return [
             'redirect' => [
-                'label' => 'OFFLINE.indirect::lang.navigation.menu_label',
+                'label' => 'offline.indirect::lang.navigation.menu_label',
                 'icon' => 'icon-link',
                 'url' => Backend::url('offline/indirect/statistics'),
                 'order' => 50,
@@ -146,7 +146,7 @@ class Plugin extends PluginBase
                 'sideMenu' => [
                     'statistics' => [
                         'icon' => 'icon-bar-chart',
-                        'label' => 'OFFLINE.indirect::lang.title.statistics',
+                        'label' => 'offline.indirect::lang.title.statistics',
                         'url' => Backend::url('offline/indirect/statistics'),
                         'permissions' => [
                             'OFFLINE.indirect.access_redirects',
@@ -154,14 +154,14 @@ class Plugin extends PluginBase
                     ],
                     'redirects' => [
                         'icon' => 'icon-link',
-                        'label' => 'OFFLINE.indirect::lang.navigation.menu_label',
+                        'label' => 'offline.indirect::lang.navigation.menu_label',
                         'url' => Backend::url('offline/indirect/redirects'),
                         'permissions' => [
                             'OFFLINE.indirect.access_redirects',
                         ],
                     ],
                     'reorder' => [
-                        'label' => 'OFFLINE.indirect::lang.buttons.reorder_redirects',
+                        'label' => 'offline.indirect::lang.buttons.reorder_redirects',
                         'url' => Backend::url('offline/indirect/redirects/reorder'),
                         'icon' => 'icon-sort-amount-asc',
                         'permissions' => [
@@ -169,7 +169,7 @@ class Plugin extends PluginBase
                         ],
                     ],
                     'logs' => [
-                        'label' => 'OFFLINE.indirect::lang.buttons.logs',
+                        'label' => 'offline.indirect::lang.buttons.logs',
                         'url' => Backend::url('offline/indirect/logs'),
                         'icon' => 'icon-file-text-o',
                         'permissions' => [
@@ -177,7 +177,7 @@ class Plugin extends PluginBase
                         ],
                     ],
                     'categories' => [
-                        'label' => 'OFFLINE.indirect::lang.buttons.categories',
+                        'label' => 'offline.indirect::lang.buttons.categories',
                         'url' => Backend::url('offline/indirect/categories'),
                         'icon' => 'icon-tag',
                         'permissions' => [
@@ -185,7 +185,7 @@ class Plugin extends PluginBase
                         ],
                     ],
                     'import' => [
-                        'label' => 'OFFLINE.indirect::lang.buttons.import',
+                        'label' => 'offline.indirect::lang.buttons.import',
                         'url' => Backend::url('offline/indirect/redirects/import'),
                         'icon' => 'icon-download',
                         'permissions' => [
@@ -193,7 +193,7 @@ class Plugin extends PluginBase
                         ],
                     ],
                     'export' => [
-                        'label' => 'OFFLINE.indirect::lang.buttons.export',
+                        'label' => 'offline.indirect::lang.buttons.export',
                         'url' => Backend::url('offline/indirect/redirects/export'),
                         'icon' => 'icon-upload',
                         'permissions' => [
@@ -223,9 +223,9 @@ class Plugin extends PluginBase
             'redirect_match_type' => function ($value) {
                 switch ($value) {
                     case Redirect::TYPE_EXACT:
-                        return e(trans('OFFLINE.indirect::lang.redirect.exact'));
+                        return e(trans('offline.indirect::lang.redirect.exact'));
                     case Redirect::TYPE_PLACEHOLDERS:
-                        return e(trans('OFFLINE.indirect::lang.redirect.placeholders'));
+                        return e(trans('offline.indirect::lang.redirect.placeholders'));
                     default:
                         return $value;
                 }
@@ -233,15 +233,15 @@ class Plugin extends PluginBase
             'redirect_status_code' => function ($value) {
                 switch ($value) {
                     case 301:
-                        return e(trans('OFFLINE.indirect::lang.redirect.permanent'));
+                        return e(trans('offline.indirect::lang.redirect.permanent'));
                     case 302:
-                        return e(trans('OFFLINE.indirect::lang.redirect.temporary'));
+                        return e(trans('offline.indirect::lang.redirect.temporary'));
                     case 303:
-                        return e(trans('OFFLINE.indirect::lang.redirect.see_other'));
+                        return e(trans('offline.indirect::lang.redirect.see_other'));
                     case 404:
-                        return e(trans('OFFLINE.indirect::lang.redirect.not_found'));
+                        return e(trans('offline.indirect::lang.redirect.not_found'));
                     case 410:
-                        return e(trans('OFFLINE.indirect::lang.redirect.gone'));
+                        return e(trans('offline.indirect::lang.redirect.gone'));
                     default:
                         return $value;
                 }
@@ -249,11 +249,11 @@ class Plugin extends PluginBase
             'redirect_target_type' => function ($value) {
                 switch ($value) {
                     case Redirect::TARGET_TYPE_PATH_URL:
-                        return e(trans('OFFLINE.indirect::lang.redirect.target_type_path_or_url'));
+                        return e(trans('offline.indirect::lang.redirect.target_type_path_or_url'));
                     case Redirect::TARGET_TYPE_CMS_PAGE:
-                        return e(trans('OFFLINE.indirect::lang.redirect.target_type_cms_page'));
+                        return e(trans('offline.indirect::lang.redirect.target_type_cms_page'));
                     case Redirect::TARGET_TYPE_STATIC_PAGE:
-                        return e(trans('OFFLINE.indirect::lang.redirect.target_type_static_page'));
+                        return e(trans('offline.indirect::lang.redirect.target_type_static_page'));
                     default:
                         return $value;
                 }
@@ -272,7 +272,7 @@ class Plugin extends PluginBase
                 return sprintf(
                     '<span class="%s" title="%s"></span>',
                     $value ? 'oc-icon-magic' : 'oc-icon-user',
-                    e(trans('OFFLINE.indirect::lang.redirect.system_tip'))
+                    e(trans('offline.indirect::lang.redirect.system_tip'))
                 );
             },
         ];
